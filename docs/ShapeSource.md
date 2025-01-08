@@ -62,6 +62,12 @@ boolean
 ```
 Enables clustering on the source for point shapes.
 
+Cluster groups become new Point features in the source with additional properties:
+
+`cluster` is true if the point is a cluster
+`cluster_id` A unqiue id for the cluster to be used in conjunction with the cluster inspection methods
+`point_count` Number of original points grouped into this cluster
+`point_count_abbreviated` An abbreviated point count
 
   
 ### clusterRadius
@@ -81,10 +87,7 @@ The default value is 50.
 number
 ```
 Specifies the maximum zoom level at which to cluster points if clustering is enabled.
-Defaults to one zoom level less than the value of maxZoomLevel so that, at the maximum zoom level,
-the shapes are not clustered.
-
-
+Defaults to one zoom level less than the value of maxZoomLevel so that, at the maximum zoom level, the shapes are not clustered. Clusters are re-evaluated at integer zoom levels so setting clusterMaxZoom to 14 means the clusters will be displayed until z15.
   
 ### clusterProperties
 
