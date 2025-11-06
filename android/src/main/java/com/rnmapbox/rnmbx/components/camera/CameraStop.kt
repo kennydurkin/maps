@@ -138,8 +138,9 @@ class CameraStop {
                 CameraOptions.Builder()
                     .pitch(tilt)
                     .bearing(bearing)
+                    .padding(cameraPaddingEdgeInsets)
                     .build(),
-                cameraPaddingEdgeInsets,
+                null,
                 null,
                 ScreenCoordinate(0.0, 0.0)
             )
