@@ -458,12 +458,12 @@ open class RNMBXCamera : RNMBXMapComponentBase {
             for: bounds,
             camera: .init(cameraState: .init(
               center: .init(),
-              padding: .zero,
+              padding: padding,
               zoom: zoom ?? 0,
               bearing: heading ?? map.mapboxMap.cameraState.bearing,
               pitch: pitch ?? map.mapboxMap.cameraState.pitch
             )),
-            coordinatesPadding: padding,
+            coordinatesPadding: nil,
             maxZoom: nil,
             offset: nil
           )
